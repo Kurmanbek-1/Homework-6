@@ -20,7 +20,7 @@ while True:
         print(f'Найдено: {len(emails)}')
 
     elif user_input == '3':
-        files = re.findall(r'[A-Z][a-z]+\.[a-z]+', content)
+        files = re.findall(r'\s[A-Za-z]+\.[a-z0-9]+', content)
         with open('file.txt', 'w') as file:
             file.write(f'Найдено: {len(files)}\n{files}')
         print(f'Найдено: {len(files)}')
