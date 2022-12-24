@@ -27,7 +27,7 @@ while True:
         print(f'Найдено: {len(files)}')
 
     elif user_input == '4':
-        colors = re.findall(r'#[a-z0-9][0-9a-z]+', content)
+        colors = re.findall(r'#[a-f0-9][0-9a-f]+', content)
         with open('colors.txt', 'w') as file:
             file.write(f'Найдено: {len(colors)}\n{colors}')
             print(f'Найдено: {len(colors)}')
