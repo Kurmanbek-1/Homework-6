@@ -1,0 +1,2 @@
+Найдено: 12
+['Ibrahim\tTaveriner', ' Moreno', ' Dornan', ' Mara', ' Grange', ' Mendoza', ' Villier', ' Angel', ' Ferrari', ' Surf', ' Najera', ' Bosse']
