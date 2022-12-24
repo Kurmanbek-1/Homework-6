@@ -7,11 +7,12 @@ while True:
 
     user_input = input('Выберите: 1 - Имена и фамилии, 2 - Емайлы, 3 - Название файлов, 4 - Цвета, 5 - Выход: ')
 
-    if user_input == '1':
-        names = re.findall(r"^[A-Z][a-z|-]+\s[A-Z][' |a-zA-Z]+| [A-Z][a-z]+", content)  #Здесь как имена, так и фамилии
+    if user_input == '1': 
         with open('names.txt', 'w') as file:
-            file.write(f'Найдено: {len(names)}\n{names}')
-        print(f'Найдено: {len(names)}')
+            names = re.findall(r"\b[A-Z][a-zA-Z'\=\.]+[\S]+[a-zA-Z\'\-\.]+\b", content)
+            for name in names:
+                file.write(name + '\n')
+            print(f'Найдено: {len(names)}')
 
     elif user_input == '2':
         emails = re.findall(r'[a-z0-9]+@[a-z0-9|-]+\.[a-z]+', content)
@@ -36,8 +37,3 @@ while True:
 
     else:
         print('Введите только цифру того, что вы хотите увидеть!')
-    
-    
-
-
-
